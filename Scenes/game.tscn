@@ -26,7 +26,7 @@ texture = ExtResource("2_u4xs8")
 14:1/0 = 0
 14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.375, 8, -8, 8, 8, -8, 8)
 13:1/0 = 0
-13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, -0.125, 8, 8, -8, 8)
+13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 7.125, 8, 0.375, 8, 8, -8, 8)
 16:1/0 = 0
 16:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -0.0625, 8, 8, -8, 8)
 16:2/0 = 0
@@ -34,7 +34,7 @@ texture = ExtResource("2_u4xs8")
 17:2/0 = 0
 17:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:1/0 = 0
-17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.25, 8, 8, 8, 8, -8, 8)
+17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.125, 8, 8, 8, 8, -8, 8)
 19:2/0 = 0
 19:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:2/0 = 0
@@ -259,7 +259,8 @@ sources/1 = SubResource("TileSetAtlasSource_4p8ti")
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_hypvy")]
-position = Vector2(52, 40)
+z_index = 1
+position = Vector2(29, -46)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
