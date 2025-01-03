@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://cmxphkvg1lyvu"]
+[gd_scene load_steps=9 format=4 uid="uid://cmxphkvg1lyvu"]
 
 [ext_resource type="PackedScene" uid="uid://b02pek68pxkcp" path="res://Scenes/player.tscn" id="1_hypvy"]
 [ext_resource type="Texture2D" uid="uid://dfjbh3gtdvr7e" path="res://Assets/tilesets/tileset.png" id="2_u4xs8"]
@@ -257,6 +257,44 @@ texture = ExtResource("2_u4xs8")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_4p8ti")
 
+[sub_resource type="Animation" id="Animation_670l0"]
+resource_name = "MOVEEEE"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.766667, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(440, 120), Vector2(509, 120), Vector2(590, 120)]
+}
+
+[sub_resource type="Animation" id="Animation_sga1c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(446, 120)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ndpv"]
+_data = {
+"MOVEEEE": SubResource("Animation_670l0"),
+"RESET": SubResource("Animation_sga1c")
+}
+
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_hypvy")]
@@ -271,7 +309,13 @@ tile_map_data = PackedByteArray("AAD+/wUAAQABAAEAAAD//wUAAQABAAEAAAAAAAUAAQABAAE
 tile_set = SubResource("TileSet_gtp2a")
 
 [node name="Platform" parent="." instance=ExtResource("3_0rn73")]
-position = Vector2(500, 105)
+position = Vector2(446, 120)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform"]
+libraries = {
+"": SubResource("AnimationLibrary_1ndpv")
+}
+autoplay = "MOVEEEE"
 
 [node name="Platform2" parent="." instance=ExtResource("3_0rn73")]
 position = Vector2(140, 22)
