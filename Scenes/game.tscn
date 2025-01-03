@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://cmxphkvg1lyvu"]
+[gd_scene load_steps=10 format=4 uid="uid://cmxphkvg1lyvu"]
 
 [ext_resource type="PackedScene" uid="uid://b02pek68pxkcp" path="res://Scenes/player.tscn" id="1_hypvy"]
 [ext_resource type="Texture2D" uid="uid://dfjbh3gtdvr7e" path="res://Assets/tilesets/tileset.png" id="2_u4xs8"]
 [ext_resource type="PackedScene" uid="uid://bfl51opq4cpsf" path="res://Scenes/platform.tscn" id="3_0rn73"]
+[ext_resource type="PackedScene" uid="uid://dr8bumcv1yuo0" path="res://Scenes/fossilPickup.tscn" id="4_n71rj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4p8ti"]
 texture = ExtResource("2_u4xs8")
@@ -322,3 +323,6 @@ position = Vector2(140, 22)
 
 [node name="Platform3" parent="." instance=ExtResource("3_0rn73")]
 position = Vector2(154, -59)
+
+[node name="Fossil" parent="." instance=ExtResource("4_n71rj")]
+position = Vector2(216, -139)
