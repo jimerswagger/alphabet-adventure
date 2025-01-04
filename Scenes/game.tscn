@@ -325,4 +325,10 @@ position = Vector2(140, 22)
 position = Vector2(154, -59)
 
 [node name="Fossil" parent="." instance=ExtResource("4_n71rj")]
-position = Vector2(216, -139)
+position = Vector2(223, -139)
+
+[node name="Fossil2" parent="." instance=ExtResource("4_n71rj")]
+position = Vector2(130, 3)
+
+[node name="Fossil3" parent="." instance=ExtResource("4_n71rj")]
+position = Vector2(93, -105)
