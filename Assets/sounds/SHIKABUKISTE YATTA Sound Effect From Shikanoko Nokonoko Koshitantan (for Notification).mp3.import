@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://da1cwfwjcali1"
+path="res://.godot/imported/SHIKABUKISTE YATTA Sound Effect From Shikanoko Nokonoko Koshitantan (for Notification).mp3-0c62db2860bf923fc0f17f913c43c2e4.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/SHIKABUKISTE YATTA Sound Effect From Shikanoko Nokonoko Koshitantan (for Notification).mp3"
+dest_files=["res://.godot/imported/SHIKABUKISTE YATTA Sound Effect From Shikanoko Nokonoko Koshitantan (for Notification).mp3-0c62db2860bf923fc0f17f913c43c2e4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
