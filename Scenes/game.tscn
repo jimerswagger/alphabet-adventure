@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bfl51opq4cpsf" path="res://Scenes/platform.tscn" id="3_0rn73"]
 [ext_resource type="PackedScene" uid="uid://dr8bumcv1yuo0" path="res://Scenes/fossilPickup.tscn" id="4_n71rj"]
 [ext_resource type="AudioStream" uid="uid://8k5h5ngooeqv" path="res://Assets/sounds/YATTA.mp3" id="5_tlmto"]
-[ext_resource type="PackedScene" uid="uid://dw518t7n6dil5" path="res://Scenes/killzone.tscn" id="6_3uln5"]
-[ext_resource type="AudioStream" uid="uid://bbvqk73bfenpw" path="res://Assets/sounds/FortnightDed.mp3" id="7_dnsmk"]
+[ext_resource type="PackedScene" uid="uid://cquqxm7fgwvtm" path="res://Scenes/killzone.tscn" id="6_3uln5"]
+[ext_resource type="AudioStream" uid="uid://be0t3lwp2au6e" path="res://Assets/sounds/FortnightDed.mp3" id="7_dnsmk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4p8ti"]
 texture = ExtResource("2_u4xs8")
@@ -299,7 +299,7 @@ _data = {
 "RESET": SubResource("Animation_sga1c")
 }
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o61sp"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3p6v4"]
 
 [node name="Game" type="Node2D"]
 
@@ -347,11 +347,11 @@ collision_mask = 2
 stream = ExtResource("5_tlmto")
 volume_db = -2.811
 
+[node name="fortnite2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_dnsmk")
+
 [node name="Killzone" parent="." instance=ExtResource("6_3uln5")]
-position = Vector2(87, 200)
+position = Vector2(57, 200)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-shape = SubResource("WorldBoundaryShape2D_o61sp")
-
-[node name="fortniteded" type="AudioStreamPlayer" parent="Killzone"]
-stream = ExtResource("7_dnsmk")
+shape = SubResource("WorldBoundaryShape2D_3p6v4")
