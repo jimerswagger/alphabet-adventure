@@ -1,11 +1,11 @@
 extends Area2D
 
+@onready var timer = $Timer
 
 
-func _on_body_entered(_body):
+func _on_body_entered(body):
+	timer.start()
 	$YATTA.play()
-	
 
-
-func _on_yatta_finished():
-	queue_free() # Replace with function body.
+func _on_timer_timeout():
+	queue_free()
