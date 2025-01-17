@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw518t7n6dil5"]
+
+[ext_resource type="PackedScene" uid="uid://dw518t7n6dil5" path="res://Scenes/killzone.tscn" id="1_quntk"]
+
+[node name="Killzone" instance=ExtResource("1_quntk")]
+
+[node name="Timer" parent="." index="0"]
+wait_time = 2.0
